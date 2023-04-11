@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-sora text-base;
+}
+
+.icon {
+  contain: strict;
+}
+
+.icon:not(.no-mask) {
+  mask-image: var(--image);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.icon.no-mask {
+  background-image: var(--image);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
