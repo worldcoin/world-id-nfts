@@ -27,8 +27,8 @@ const getClassNames = (className?: string, variant?: Variant, size?: Size) => {
   return cn(
     "rounded-full",
     {
-      "bg-f68d60 text-white ": variant === "default",
-      "border border-e4cba4 bg-f9edd6 text-black": variant === "flat",
+      "bg-orange text-white ": variant === "default",
+      "border border-sand-500 bg-sand text-black": variant === "flat",
     },
     {
       "text-sm md:text-base px-8 py-4 md:px-10 md:py-6": size === "default",

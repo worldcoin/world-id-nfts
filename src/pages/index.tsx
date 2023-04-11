@@ -58,7 +58,7 @@ export const App: FC = () => {
   return (
     <main
       className={cn(
-        "bg-repeat-x min-h-screen bg-f9edd6 bg-[length:400px]",
+        "bg-repeat-x min-h-screen bg-sand bg-[length:400px]",
         "grid grid-rows-[auto_1fr_auto] gap-8"
       )}
       ref={ref}
@@ -68,7 +68,7 @@ export const App: FC = () => {
 
         <div className="hidden md:block">
           <Link
-            className="flex items-center gap-3 text-black font-rubik"
+            className="flex items-center gap-3 text-grey-900 font-rubik"
             variant="flat"
             size="small"
           >
@@ -91,7 +91,7 @@ export const App: FC = () => {
         )}
       >
         <div className="flex flex-col items-center md:items-start gap-6 justify-center md:col-span-1">
-          <div className="bg-f8edd6 border border-dfc298 rounded-full px-4 py-2 font-rubik text-sm md:text-lg">
+          <div className="bg-sand-300 text-grey-900 border border-sand-700 rounded-full px-4 py-2 font-rubik text-sm md:text-lg">
             ETH Tokyo 2023
           </div>
 
@@ -99,7 +99,7 @@ export const App: FC = () => {
             <h1 className="text-4xl md:text-6xl md:inline">
               Worldie meets Worldcoin
             </h1>
-            <span className="md:text-xl text-3c424b [vertical-align:top]">
+            <span className="md:text-xl text-grey-700 [vertical-align:top]">
               in Tokyo 🇯🇵
             </span>
           </div>
@@ -129,7 +129,7 @@ export const App: FC = () => {
         </div>
 
         <div className="flex items-center justify-center md:col-span-1 md:col-start-1 md:row-start-2">
-          <div className="flex flex-col items-center p-4 bg-f9edd6 border border-dfc298 rounded-lg">
+          <div className="flex flex-col items-center p-4 bg-sand border border-sand-700 rounded-lg text-grey-900">
             <span className="md:text-xl font-rubik">Claimed</span>
 
             <div className="flex items-center font-semibold text-xl md:text-3xl">
@@ -139,7 +139,7 @@ export const App: FC = () => {
         </div>
       </div>
 
-      <div className="px-6 py-5 md:px-28 md:py-7 font-rubik text-xs text-center md:text-left md:text-sm">
+      <div className="px-6 py-5 md:px-28 md:py-7 font-rubik text-xs text-center md:text-left md:text-sm text-grey-900">
         All rights reserved by Worldcoin and Thirdweb Studio ©2023
       </div>
     </main>
