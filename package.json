@@ -1,6 +1,6 @@
 {
-  "name": "world-id-petorbz",
-  "version": "0.1.0",
+  "name": "world-id-nfts",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc"
+  },
+  "engines": {
+    "node": "18"
   },
   "dependencies": {
     "@worldcoin/idkit": "^0.4.6",
