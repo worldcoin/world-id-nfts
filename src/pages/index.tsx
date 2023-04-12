@@ -25,7 +25,7 @@ import { QrScanner } from "@/scenes/QrScanner";
 export type ScreenType = "intro" | "name";
 
 export const App: FC = () => {
-  const [step, setStep] = useState<Steps>(Steps.verified);
+  const [step, setStep] = useState<Steps>(Steps.intro);
   const [flow, setFlow] = useState<Flows | null>(null);
   const [address, setAddress] = useState<string | null>(null);
   const [claimedCount, setClaimedCount] = useState(95);
