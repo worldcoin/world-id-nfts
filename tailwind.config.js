@@ -1,24 +1,3 @@
-const mirrorHexColors = (colors) =>
-  Object.fromEntries(
-    colors.map((color, index) => {
-      if (!/#[a-f0-9]{6}/.test(color)) {
-        console.warn(
-          'All colors should be lowercase hexadecimal strings 7 characters long with "#" sign at the beginning'
-        );
-      }
-
-      if (colors.indexOf(color) !== index) {
-        console.warn("Colors should be unique");
-      }
-
-      if (colors[index - 1] > color) {
-        console.warn("Colors should be sorted alphabetically");
-      }
-
-      return [color.substring(1), color];
-    })
-  );
-
 module.exports = {
   content: ["./src/**/*.tsx", "./src/**/*.ts"],
   theme: {
@@ -27,14 +6,41 @@ module.exports = {
         sora: ["Sora", "Arial, Helvetica, sans-serif"],
         rubik: ["Rubik", "Arial, Helvetica, sans-serif"],
       },
-      colors: mirrorHexColors([
-        "#3c424b",
-        "#dfc298",
-        "#e4cba4",
-        "#f68d60",
-        "#f8edd6",
-        "#f9edd6",
-      ]),
+      colors: {
+        grey: {
+          DEFAULT: "#191c20",
+          100: "#f3f4f5",
+          200: "#ebecef",
+          300: "#d6d9dd",
+          500: "#657080",
+          700: "#3c424b",
+          800: "#1b1a22",
+          900: "#191c20",
+        },
+        orange: {
+          DEFAULT: "#f68d60",
+        },
+        blue: {
+          DEFAULT: "#203a70",
+        },
+        purple: {
+          DEFAULT: "#9d50ff",
+          secondary: "#f7f1ff",
+        },
+        success: {
+          DEFAULT: "#00c313",
+          secondary: "#189625",
+        },
+        info: {
+          DEFAULT: "#506dff",
+        },
+        sand: {
+          DEFAULT: "#f9edd6",
+          300: "#f8edd6",
+          500: "#e4cba4",
+          700: "#dfc298",
+        },
+      },
     },
   },
   plugins: [],
