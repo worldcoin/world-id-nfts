@@ -14,6 +14,7 @@ module.exports = {
           300: "#d6d9dd",
           500: "#657080",
           700: "#3c424b",
+          800: "#1b1a22",
           900: "#191c20",
         },
         orange: {
@@ -28,7 +29,7 @@ module.exports = {
         },
         success: {
           DEFAULT: "#00c313",
-          secondary: "#ebfaec",
+          secondary: "#189625",
         },
         info: {
           DEFAULT: "#506dff",

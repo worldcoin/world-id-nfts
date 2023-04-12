@@ -1,20 +1,22 @@
+import { ethereumClient, wagmiClient } from "@/lib/wallet-connect";
 import "../styles/styles.css";
-import { WagmiConfig, createClient } from "wagmi";
-import { ConnectKitProvider, getDefaultClient } from "connectkit";
+import { Fragment, useEffect } from "react";
+import { WagmiConfig } from "wagmi";
+import { Web3Modal, useWeb3ModalTheme } from "@web3modal/react";
 
-const client = createClient(
-  getDefaultClient({
-    appName: "PetOrbz",
-    infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
-  })
-);
+const App = ({ Component, pageProps }) => {
+  return (
+    <Fragment>
+      <WagmiConfig client={wagmiClient}>
+        <Component {...pageProps} />
+      </WagmiConfig>
 
-const App = ({ Component, pageProps }) => (
-  <WagmiConfig client={client}>
-    <ConnectKitProvider theme="auto" mode="dark">
-      <Component {...pageProps} />
-    </ConnectKitProvider>
-  </WagmiConfig>
-);
+      <Web3Modal
+        projectId={process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID}
+        ethereumClient={ethereumClient}
+      />
+    </Fragment>
+  );
+};
 
 export default App;

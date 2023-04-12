@@ -3,8 +3,17 @@ import { CSSProperties, FC, memo } from "react";
 
 const iconNames = [
   "3rd-web",
+  "arrow-left",
+  "camera",
+  "check-circle",
+  "check",
+  "chevron",
+  "close",
+  "document",
   "external",
-  "mascot",
+  "info",
+  "spinner",
+  "wallet",
   "wid-human",
   "worldcoin",
 ] as const;

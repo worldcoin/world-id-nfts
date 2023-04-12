@@ -13,18 +13,21 @@
     "node": "18"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.13",
+    "@web3modal/ethereum": "^2.2.2",
+    "@web3modal/react": "^2.2.2",
     "@worldcoin/idkit": "^0.4.6",
     "autoprefixer": "^10.4.14",
     "classnames": "^2.3.1",
-    "connectkit": "^0.0.1",
-    "defender-relay-client": "^1.27.1",
-    "ethers": "^5.6.9",
+    "ethers": "^5",
+    "fork-react-qr-reader": "3.0.1-beta-1",
     "next": "12.2.4",
     "postcss": "^8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-qr-reader": "3.0.0-beta-1",
     "tailwindcss": "^3.3.1",
-    "wagmi": "^0.6.2"
+    "wagmi": "^0.12.10"
   },
   "devDependencies": {
     "@types/node": "^18.6.5",
