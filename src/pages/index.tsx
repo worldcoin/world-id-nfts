@@ -5,13 +5,13 @@ import { Flows, Steps } from 'types'
 import Icon from '../components/Icon'
 import { Direct } from '@/scenes/Direct'
 import WorldieNFT from '@/abi/WorldieNFT.abi'
-import { IDKitWidget } from '@worldcoin/idkit'
 import { QrScanner } from '@/scenes/QrScanner'
 import mascot from '/public/images/mascot.png'
 import { ClaimMethod } from '@/scenes/ClaimMethod'
 import { Button, Link } from '../components/Button'
 import { Confirmation } from '@/scenes/Confirmation'
 import { useBackgroundPattern } from '@/lib/generate-pattern'
+import { IDKitWidget, ISuccessResult } from '@worldcoin/idkit'
 import { AnimatedOutline } from '@/components/AnimatedOutline'
 import { useAccount, useContractRead, useDisconnect } from 'wagmi'
 import { FC, Fragment, memo, useCallback, useMemo, useRef, useState } from 'react'
@@ -25,6 +25,7 @@ export const Main: FC = () => {
 	const [step, setStep] = useState<Steps>(Steps.intro)
 	const [flow, setFlow] = useState<Flows | null>(null)
 	const [address, setAddress] = useState<string | null>(null)
+	const [proof, setProof] = useState<ISuccessResult | null>(null)
 
 	const { address: wagmiAddr } = useAccount()
 	const { disconnect } = useDisconnect()
@@ -46,22 +47,29 @@ export const Main: FC = () => {
 	const claimedCount = useMemo(() => {
 		if (!nextTokenId) return '??'
 
-		return (nextTokenId - BigInt(1)).toString()
+		return nextTokenId.sub(1).toString()
 	}, [nextTokenId])
 
 	useBackgroundPattern(mainRef)
 
-	const handleIdkitVerify = useCallback(() => {
+	const handleIdkitVerify = useCallback((proof: ISuccessResult) => {
+		setProof(proof)
 		setStep(Steps.confirmation)
 	}, [])
 
 	const handleClaimConfirm = useCallback(() => {
+		fetch('/api/mint', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ address, proof }),
+		})
+
 		setFlow(null)
 		setStep(Steps.claimed)
 		refreshNextTokenId()
-	}, [refreshNextTokenId])
-
-	console.log(step)
+	}, [address, proof, refreshNextTokenId])
 
 	return (
 		<Fragment>
@@ -129,7 +137,7 @@ export const Main: FC = () => {
 								app_id={process.env.NEXT_PUBLIC_WLD_APP_ID!}
 								action="worldie-tokyo-23"
 								signal={address!}
-								handleVerify={handleIdkitVerify}
+								onSuccess={handleIdkitVerify}
 								autoClose
 							>
 								{({ open }) => (

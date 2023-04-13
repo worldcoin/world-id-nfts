@@ -11,7 +11,7 @@ export function Form({
 }: {
 	variant: 'input' | 'confirmation'
 	onSubmit?: (address: string) => void
-	address: string|null
+	address: string | null
 }) {
 	const [valid, setValid] = useState(false)
 	const formRef = useRef<HTMLFormElement>(null)

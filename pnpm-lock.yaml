@@ -4,12 +4,6 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.7.13
     version: 1.7.13(react-dom@18.2.0)(react@18.2.0)
-  '@web3modal/ethereum':
-    specifier: ^2.2.2
-    version: 2.2.2(@wagmi/core@0.10.9)(ethers@6.3.0)
-  '@web3modal/react':
-    specifier: ^2.2.2
-    version: 2.2.2(react-dom@18.2.0)(react@18.2.0)
   '@worldcoin/idkit':
     specifier: ^0.4.6
     version: 0.4.6(@types/node@18.6.5)(@types/react@18.0.17)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.1)(typescript@4.7.4)
@@ -21,13 +15,13 @@ dependencies:
     version: 2.3.1
   connectkit:
     specifier: ^1.2.2
-    version: 1.2.2(ethers@6.3.0)(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)(wagmi@0.12.10)
+    version: 1.2.2(ethers@5.7.2)(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)(wagmi@0.12.10)
   defender-relay-client:
     specifier: ^1.41.0
     version: 1.41.0(@ethersproject/abstract-provider@5.7.0)(@ethersproject/abstract-signer@5.7.0)(@ethersproject/hash@5.7.0)(@ethersproject/providers@5.7.2)(@ethersproject/transactions@5.7.0)(web3-core-helpers@1.9.0)(web3-core@1.9.0)
   ethers:
-    specifier: ^6.3.0
-    version: 6.3.0
+    specifier: ^5.7.2
+    version: 5.7.2
   fork-react-qr-reader:
     specifier: 3.0.1-beta-1
     version: 3.0.1-beta-1(react-dom@18.2.0)(react@18.2.0)
@@ -51,7 +45,7 @@ dependencies:
     version: 3.3.1(postcss@8.4.21)
   wagmi:
     specifier: ^0.12.10
-    version: 0.12.10(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@6.3.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.7.4)
+    version: 0.12.10(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.7.4)
 
 devDependencies:
   '@types/node':
@@ -74,10 +68,6 @@ devDependencies:
     version: 4.7.4
 
 packages:
-
-  /@adraffy/ens-normalize@1.9.0:
-    resolution: {integrity: sha512-iowxq3U30sghZotgl4s/oJRci6WPBfNO5YYgk2cIOMCHr3LeGPcsZjCEr+33Q4N+oV3OABDAtA+pyvWjbvBifQ==}
-    dev: false
 
   /@ampproject/remapping@2.2.1:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
@@ -1080,10 +1070,6 @@ packages:
     resolution: {integrity: sha512-iR8GBkDt0Q3GyaVcIu7mSsVIqnFbkbRzGLWlvhwunacoLwt4J3swfKhfaM6rN6WY+TBGoYT1GtT1mIh2/jGbRQ==}
     dev: false
 
-  /@noble/hashes@1.1.2:
-    resolution: {integrity: sha512-KYRCASVTv6aeUi1tsF8/vpyR7zpfs3FUzy2Jqm+MU+LmUKhQ0y2FpfwqkCcxSg2ua4GALJd8k2R76WxwZGbQpA==}
-    dev: false
-
   /@noble/hashes@1.3.0:
     resolution: {integrity: sha512-ilHEACi9DwqJB0pw7kv+Apvh50jiiSyR/cQ3y4W7lOR5mhvn/50FLUfsnfJz0BDZtl/RR16kXvptiv6q1msYZg==}
     dev: false
@@ -1899,7 +1885,7 @@ packages:
       typescript: 4.7.4
     dev: false
 
-  /@wagmi/connectors@0.3.12(@babel/core@7.21.4)(@types/node@18.6.5)(@wagmi/core@0.10.9)(ethers@6.3.0)(react@18.2.0)(typescript@4.7.4):
+  /@wagmi/connectors@0.3.12(@babel/core@7.21.4)(@types/node@18.6.5)(@wagmi/core@0.10.9)(ethers@5.7.2)(react@18.2.0)(typescript@4.7.4):
     resolution: {integrity: sha512-Ui8wyAMI3V8pnDlmTVSug7S53sTSNkgFuGrxFoKxQrTQJIC+AvD7CbeiYKcbFxrIrv9c/sTK5ySL4IBe+KjFUQ==}
     peerDependencies:
       '@wagmi/core': '>=0.9.x'
@@ -1915,12 +1901,12 @@ packages:
       '@ledgerhq/connect-kit-loader': 1.0.2
       '@safe-global/safe-apps-provider': 0.15.2
       '@safe-global/safe-apps-sdk': 7.10.1
-      '@wagmi/core': 0.10.9(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@6.3.0)(react@18.2.0)(typescript@4.7.4)
+      '@wagmi/core': 0.10.9(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@5.7.2)(react@18.2.0)(typescript@4.7.4)
       '@walletconnect/ethereum-provider': 2.6.2(@types/node@18.6.5)(@web3modal/standalone@2.2.2)(typescript@4.7.4)
       '@walletconnect/legacy-provider': 2.0.0
       '@web3modal/standalone': 2.2.2(react@18.2.0)
       abitype: 0.3.0(typescript@4.7.4)
-      ethers: 6.3.0
+      ethers: 5.7.2
       eventemitter3: 4.0.7
       typescript: 4.7.4
     transitivePeerDependencies:
@@ -1939,7 +1925,7 @@ packages:
       - zod
     dev: false
 
-  /@wagmi/core@0.10.9(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@6.3.0)(react@18.2.0)(typescript@4.7.4):
+  /@wagmi/core@0.10.9(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@5.7.2)(react@18.2.0)(typescript@4.7.4):
     resolution: {integrity: sha512-/t7gcF6BvWiIBYdZ6RFiq/5cdMj+ljCTFlMgOEojl1BCe0OsbhrTKzbgTrJ6ol82vJI5uwcOAqEPD5ObN09oVg==}
     peerDependencies:
       ethers: '>=5.5.1 <6'
@@ -1949,9 +1935,9 @@ packages:
         optional: true
     dependencies:
       '@wagmi/chains': 0.2.17(typescript@4.7.4)
-      '@wagmi/connectors': 0.3.12(@babel/core@7.21.4)(@types/node@18.6.5)(@wagmi/core@0.10.9)(ethers@6.3.0)(react@18.2.0)(typescript@4.7.4)
+      '@wagmi/connectors': 0.3.12(@babel/core@7.21.4)(@types/node@18.6.5)(@wagmi/core@0.10.9)(ethers@5.7.2)(react@18.2.0)(typescript@4.7.4)
       abitype: 0.3.0(typescript@4.7.4)
-      ethers: 6.3.0
+      ethers: 5.7.2
       eventemitter3: 4.0.7
       typescript: 4.7.4
       zustand: 4.3.7(react@18.2.0)
@@ -2448,29 +2434,6 @@ packages:
       - react
     dev: false
 
-  /@web3modal/ethereum@2.2.2(@wagmi/core@0.10.9)(ethers@6.3.0):
-    resolution: {integrity: sha512-ksyGQsyK4pMU2Z83zZNo7HKPmjWkhcfK6K4ip+w3R/Rstcpqy/kHW/DUClXY76itu323EdesV6gBzASZ3CwBdQ==}
-    peerDependencies:
-      '@wagmi/core': '>=0.10'
-      ethers: '>=5.7'
-    dependencies:
-      '@wagmi/core': 0.10.9(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@6.3.0)(react@18.2.0)(typescript@4.7.4)
-      ethers: 6.3.0
-    dev: false
-
-  /@web3modal/react@2.2.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-NgMbRaF4XP6uzLsB935bQtjXgGEUoAM5ywXo6tVMdhmfQarEUyqxoG+H1HM2GLndMDSxJqMjVNoYXo3ibQUvVw==}
-    peerDependencies:
-      react: '>=17'
-      react-dom: '>=17'
-    dependencies:
-      '@web3modal/core': 2.2.2(react@18.2.0)
-      '@web3modal/standalone': 2.2.2(react@18.2.0)
-      '@web3modal/ui': 2.2.2(react@18.2.0)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /@web3modal/standalone@2.2.2(react@18.2.0):
     resolution: {integrity: sha512-c05kkTFNGZqnjJ3n2C8uo+wWL6ut1jexGYAyTvbweDengdsOr8LDo0VpK5V3XSKCV2fFcPh5JE9H1aA4jpnZPg==}
     dependencies:
@@ -2628,10 +2591,6 @@ packages:
 
   /aes-js@3.1.2:
     resolution: {integrity: sha512-e5pEa2kBnBOgR4Y/p20pskXI74UEz7de8ZGVo58asOtvSVG5YAbJeELPZxOmt+Bnz3rX753YKhfIn4X4l1PPRQ==}
-    dev: false
-
-  /aes-js@4.0.0-beta.3:
-    resolution: {integrity: sha512-/xJX0/VTPcbc5xQE2VUP91y1xN8q/rDfhEzLm+vLc3hYvb5+qHCnpJRuFcrKn63zumK/sCwYYzhG8HP78JYSTA==}
     dev: false
 
   /agentkeepalive@4.3.0:
@@ -3211,7 +3170,7 @@ packages:
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
-  /connectkit@1.2.2(ethers@6.3.0)(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)(wagmi@0.12.10):
+  /connectkit@1.2.2(ethers@5.7.2)(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)(wagmi@0.12.10):
     resolution: {integrity: sha512-iI8UE18oE0qVVzHWMLTyV+aee8F9HBLN6COxZogE3O3yOASeH55oREKOeKy0pQ/HkIirQii3jGL3K0JQeWcngA==}
     engines: {node: '>=12.4'}
     peerDependencies:
@@ -3222,7 +3181,7 @@ packages:
     dependencies:
       buffer: 6.0.3
       detect-browser: 5.3.0
-      ethers: 6.3.0
+      ethers: 5.7.2
       framer-motion: 6.5.1(react-dom@18.2.0)(react@18.2.0)
       qrcode: 1.5.1
       react: 18.2.0
@@ -3231,7 +3190,7 @@ packages:
       react-use-measure: 2.1.1(react-dom@18.2.0)(react@18.2.0)
       resize-observer-polyfill: 1.5.1
       styled-components: 5.3.9(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)
-      wagmi: 0.12.10(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@6.3.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.7.4)
+      wagmi: 0.12.10(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.7.4)
     transitivePeerDependencies:
       - react-is
     dev: false
@@ -4131,21 +4090,6 @@ packages:
       '@ethersproject/wallet': 5.7.0
       '@ethersproject/web': 5.7.1
       '@ethersproject/wordlists': 5.7.0
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-    dev: false
-
-  /ethers@6.3.0:
-    resolution: {integrity: sha512-CKFYvTne1YT4S1glTiu7TgGsj0t6c6GAD7evrIk8zbeUb6nK8dcUPAiAWM8uDX/1NmRTvLM9+1Vnn49hwKtEzw==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      '@adraffy/ens-normalize': 1.9.0
-      '@noble/hashes': 1.1.2
-      '@noble/secp256k1': 1.7.1
-      aes-js: 4.0.0-beta.3
-      tslib: 2.4.0
-      ws: 8.5.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -6842,7 +6786,7 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
-  /wagmi@0.12.10(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@6.3.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.7.4):
+  /wagmi@0.12.10(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.7.4):
     resolution: {integrity: sha512-ELgM4Rt6Vnb5HgX8p9vmyXLz/TaxixfJ6qVyLchNJE6cR3dBD74wywtble2s5GsVWJFWeaUauEMVCXPLA+4hSw==}
     peerDependencies:
       ethers: '>=5.5.1 <6'
@@ -6855,9 +6799,9 @@ packages:
       '@tanstack/query-sync-storage-persister': 4.29.1
       '@tanstack/react-query': 4.29.1(react-dom@18.2.0)(react@18.2.0)
       '@tanstack/react-query-persist-client': 4.29.1(@tanstack/react-query@4.29.1)
-      '@wagmi/core': 0.10.9(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@6.3.0)(react@18.2.0)(typescript@4.7.4)
+      '@wagmi/core': 0.10.9(@babel/core@7.21.4)(@types/node@18.6.5)(ethers@5.7.2)(react@18.2.0)(typescript@4.7.4)
       abitype: 0.7.1(typescript@4.7.4)
-      ethers: 6.3.0
+      ethers: 5.7.2
       react: 18.2.0
       typescript: 4.7.4
       use-sync-external-store: 1.2.0(react@18.2.0)
@@ -7145,19 +7089,6 @@ packages:
     dependencies:
       bufferutil: 4.0.7
       utf-8-validate: 5.0.10
-    dev: false
-
-  /ws@8.5.0:
-    resolution: {integrity: sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: ^5.0.2
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
     dev: false
 
   /xtend@4.0.2:
