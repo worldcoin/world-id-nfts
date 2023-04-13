@@ -1,22 +1,27 @@
-import { ethereumClient, wagmiClient } from "@/lib/wallet-connect";
-import "../styles/styles.css";
-import { Fragment, useEffect } from "react";
-import { WagmiConfig } from "wagmi";
-import { Web3Modal, useWeb3ModalTheme } from "@web3modal/react";
+import { FC } from 'react'
+import '../styles/styles.css'
+import { WagmiConfig } from 'wagmi'
+import { AppProps } from 'next/app'
+import { createClient } from 'wagmi'
+import { polygon } from 'wagmi/chains'
+import { ConnectKitProvider, getDefaultClient } from 'connectkit'
 
-const App = ({ Component, pageProps }) => {
-  return (
-    <Fragment>
-      <WagmiConfig client={wagmiClient}>
-        <Component {...pageProps} />
-      </WagmiConfig>
+const client = createClient(
+	getDefaultClient({
+		chains: [polygon],
+		appName: 'Worldie NFTs',
+		infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
+	})
+)
 
-      <Web3Modal
-        projectId={process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID}
-        ethereumClient={ethereumClient}
-      />
-    </Fragment>
-  );
-};
+const App: FC<AppProps> = ({ Component, pageProps }) => {
+	return (
+		<WagmiConfig client={client}>
+			<ConnectKitProvider>
+				<Component {...pageProps} />
+			</ConnectKitProvider>
+		</WagmiConfig>
+	)
+}
 
-export default App;
+export default App
