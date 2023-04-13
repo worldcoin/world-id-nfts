@@ -14,14 +14,14 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.13",
-    "@web3modal/ethereum": "^2.2.2",
-    "@web3modal/react": "^2.2.2",
     "@worldcoin/idkit": "^0.4.6",
     "autoprefixer": "^10.4.14",
     "classnames": "^2.3.1",
-    "ethers": "^5",
+    "connectkit": "^1.2.2",
+    "defender-relay-client": "^1.41.0",
+    "ethers": "^5.7.2",
     "fork-react-qr-reader": "3.0.1-beta-1",
-    "next": "12.2.4",
+    "next": "13.3.0",
     "postcss": "^8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -34,6 +34,7 @@
     "@types/react": "^18.0.17",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
+    "prettier-plugin-sort-imports-desc": "^1.0.0",
     "typescript": "^4.7.4"
   }
 }

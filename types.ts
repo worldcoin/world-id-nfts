@@ -1,21 +1,22 @@
 export enum Steps {
   intro,
-  verified,
   selectClaimMethod,
   flow,
+  worldId,
+  verified,
   claimed,
   confirmation,
 }
 
 export enum Flows {
   direct,
-  walletConnect,
+  connectKit,
   scan,
 }
 
 export interface SceneProps {
-  address: string;
-  flow: Flows;
+  address: string|null;
+  flow: Flows|null;
   setAddress: (address: string) => void;
   setFlow: (flow: Flows | null) => void;
   setStep: (step: Steps) => void;

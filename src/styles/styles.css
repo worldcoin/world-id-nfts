@@ -3,133 +3,133 @@
 @tailwind utilities;
 
 html {
-  @apply font-sora text-base;
+	@apply font-sora text-base;
 }
 
 input,
 button,
 a,
 select {
-  outline: none;
+	outline: none;
 }
 
 .icon {
-  contain: strict;
+	contain: strict;
 }
 
 .icon:not(.no-mask) {
-  mask-image: var(--image);
-  mask-size: contain;
-  mask-position: center;
-  mask-repeat: no-repeat;
+	mask-image: var(--image);
+	mask-size: contain;
+	mask-position: center;
+	mask-repeat: no-repeat;
 }
 
 .icon.no-mask {
-  background-image: var(--image);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+	background-image: var(--image);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .button-outline {
-  position: absolute;
-  inset: -4px;
-  border-radius: 9999px;
-  overflow: clip;
+	position: absolute;
+	inset: -4px;
+	border-radius: 9999px;
+	overflow: clip;
 }
 
 .animate-outline {
-  animation: outline 3s ease-in-out infinite;
+	animation: outline 3s ease-in-out infinite;
 }
 
 @keyframes outline {
-  50% {
-    transform: translateX(100%);
-  }
+	50% {
+		transform: translateX(100%);
+	}
 }
 
 .animate-counter-prev {
-  animation: animate-counter-prev 1s ease-in;
-  animation-fill-mode: forwards;
+	animation: animate-counter-prev 1s ease-in;
+	animation-fill-mode: forwards;
 }
 
 .animate-counter-current {
-  animation: animate-counter-current 1s ease-in;
-  animation-fill-mode: forwards;
+	animation: animate-counter-current 1s ease-in;
+	animation-fill-mode: forwards;
 }
 
 @keyframes animate-counter-prev {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
 }
 
 @keyframes animate-counter-current {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
 }
 
 .qr-mask {
-  position: absolute;
-  inset: 0;
+	position: absolute;
+	inset: 0;
 }
 
 .qr-mask--cut {
-  position: absolute;
-  inset: 0;
-  transform: translate3d(0, 0, 0);
-  mix-blend-mode: multiply;
-  isolation: isolate;
+	position: absolute;
+	inset: 0;
+	transform: translate3d(0, 0, 0);
+	mix-blend-mode: multiply;
+	isolation: isolate;
 }
 
 .qr-mask--cut::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  @apply bg-grey-900/70;
+	content: '';
+	position: absolute;
+	inset: 0;
+	@apply bg-grey-900/70;
 }
 
 .qr-mask--cut::after {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
-  background: white;
-  border-radius: 26px;
+	content: '';
+	position: absolute;
+	width: 240px;
+	height: 240px;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, -50%);
+	background: white;
+	border-radius: 26px;
 }
 
 .qr-mask--frame {
-  --thickness: 4px;
-  --color: white;
-  --size: 50px;
-  --radius: 30px;
+	--thickness: 4px;
+	--color: white;
+	--size: 50px;
+	--radius: 30px;
 
-  content: "";
-  position: absolute;
-  width: 244px;
-  height: 244px;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
+	content: '';
+	position: absolute;
+	width: 244px;
+	height: 244px;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, -50%);
 
-  background: var(--color, red);
-  padding: var(--thickness);
-  border-radius: var(--radius);
-  -webkit-mask: linear-gradient(0deg, #000 calc(2 * var(--thickness)), #0000 0)
-      50% var(--thickness) / calc(100% - 2 * var(--size)) 100% repeat-y,
-    linear-gradient(-90deg, #000 calc(2 * var(--thickness)), #0000 0)
-      var(--thickness) 50% / 100% calc(100% - 2 * var(--size)) repeat-x,
-    linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
+	background: var(--color, red);
+	padding: var(--thickness);
+	border-radius: var(--radius);
+	-webkit-mask: linear-gradient(0deg, #000 calc(2 * var(--thickness)), #0000 0) 50% var(--thickness) /
+			calc(100% - 2 * var(--size)) 100% repeat-y,
+		linear-gradient(-90deg, #000 calc(2 * var(--thickness)), #0000 0) var(--thickness) 50% / 100%
+			calc(100% - 2 * var(--size)) repeat-x,
+		linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
 }
