@@ -92,7 +92,9 @@ export function Modal({
 							)}
 						</div>
 
-						{!hideImage && <Image src={mascot} alt="" width={50} height={50} objectFit="contain" />}
+						{!hideImage && (
+							<Image src={mascot} alt="" width={50} height={50} className="justify-self-center" />
+						)}
 
 						{(title || description) && (
 							<div className="mt-4 text-center">
