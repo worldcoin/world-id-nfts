@@ -38,13 +38,21 @@ select {
 	overflow: clip;
 }
 
+@property --border-angle {
+	syntax: '<angle>';
+	inherits: true;
+	initial-value: 0turn;
+}
+
 .animate-outline {
-	animation: outline 3s ease-in-out infinite;
+	--border-angle: 0turn;
+	background-image: conic-gradient(from var(--border-angle), #d6d9dd 50%, #203a70 50%);
+	animation: outline 3s linear infinite;
 }
 
 @keyframes outline {
-	50% {
-		transform: translateX(100%);
+	to {
+		--border-angle: 1turn;
 	}
 }
 
