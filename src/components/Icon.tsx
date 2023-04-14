@@ -12,6 +12,7 @@ const iconNames = [
 	'document',
 	'external',
 	'info',
+	'japan',
 	'spinner',
 	'wallet',
 	'wid-human',

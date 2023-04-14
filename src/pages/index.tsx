@@ -118,7 +118,7 @@ export const Main: FC = () => {
 							<h1 className="text-4xl lg:text-6xl lg:inline">Worldie meets Worldcoin</h1>
 
 							<span className="inline-block lg:text-xl text-grey-700 [vertical-align:top]">
-								in Tokyo 🇯🇵
+								in Tokyo <Icon name="japan" className="w-6 h-6" noMask />
 							</span>
 						</div>
 
