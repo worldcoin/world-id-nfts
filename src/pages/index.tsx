@@ -85,7 +85,7 @@ export const Main: FC = () => {
 
 					<div className="hidden md:block">
 						<Link
-							href="https://thirdweb.studio/"
+							href="https://worldies.fun/"
 							className="flex items-center gap-3 text-grey-900 font-rubik"
 							variant="flat"
 							size="small"
@@ -94,7 +94,7 @@ export const Main: FC = () => {
 
 							<span className="flex items-center gap-1">
 								<Icon name="3rd-web" className="w-5 h-5" />
-								Thirdweb Studio
+								Art by Worldies NFT
 							</span>
 
 							<Icon name="external" className="w-6 h-6" />
