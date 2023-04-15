@@ -2,6 +2,7 @@ import cn from 'classnames'
 import Image from 'next/image'
 import { useEffect } from 'react'
 import { Flows, Steps } from 'types'
+import { useModal } from 'connectkit'
 import Icon from '../components/Icon'
 import { Direct } from '@/scenes/Direct'
 import WorldieNFT from '@/abi/WorldieNFT.abi'
@@ -29,6 +30,16 @@ export const Main: FC = () => {
 
 	const { address: wagmiAddr } = useAccount()
 	const { disconnect } = useDisconnect()
+
+	const connectKitModal = useModal()
+
+	useEffect(() => {
+		if (flow === Flows.connectKit && !connectKitModal.open) {
+			console.log('test')
+			setFlow(null)
+			setStep(Steps.selectClaimMethod)
+		}
+	}, [connectKitModal, flow])
 
 	useEffect(() => {
 		if (!wagmiAddr) return
@@ -118,11 +129,11 @@ export const Main: FC = () => {
 							<h1 className="text-4xl lg:text-6xl lg:inline">Worldie meets Worldcoin</h1>
 
 							<span className="inline-block lg:text-xl text-grey-700 [vertical-align:top]">
-								in Tokyo 🇯🇵
+								in Tokyo <Icon name="japan" className="w-6 h-6" noMask />
 							</span>
 						</div>
 
-						{step === Steps.intro && (
+						{(step === Steps.intro || step === Steps.selectClaimMethod) && (
 							<Button
 								className="flex gap-3 items-center w-full lg:w-auto justify-center"
 								onClick={() => setStep(Steps.selectClaimMethod)}
