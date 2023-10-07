@@ -22,7 +22,7 @@
     "ethers": "^5.7.2",
     "fork-react-qr-reader": "3.0.1-beta-1",
     "next": "13.3.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-qr-reader": "3.0.0-beta-1",
