@@ -21,7 +21,7 @@
     "defender-relay-client": "^1.41.0",
     "ethers": "^5.7.2",
     "fork-react-qr-reader": "3.0.1-beta-1",
-    "next": "13.3.0",
+    "next": "13.5.0",
     "postcss": "^8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
